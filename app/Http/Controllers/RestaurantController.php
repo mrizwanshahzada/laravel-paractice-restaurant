@@ -47,4 +47,19 @@ class RestaurantController extends Controller
 
     }
 
+    public function update(Request $req)
+    {
+        $restaurant = Restaurant::find($req->id);
+
+        $restaurant->name = $req->name;
+        $restaurant->email = $req->email;
+        $restaurant->Address = $req->address;
+        $restaurant->save();
+
+        $req->session()->flash('status', 'Restaurant Updated Successfully');
+
+        return redirect('list');
+    }
+
+
 }
