@@ -26,6 +26,9 @@
                   <a class="nav-link" href="#">Search</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="#">Add</a>
+                  </li>
+                <li class="nav-item">
                   <a class="nav-link" href="#">Login</a>
                 </li>
                 <li class="nav-item">
@@ -36,7 +39,7 @@
         </nav>
     </header>
     <body>
-        <div>
+        <div class="container">
             @yield('content')
         </div>
         <footer>
