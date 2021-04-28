@@ -22,4 +22,6 @@ use App\Http\Controllers\HomeController;
 Route::get('/',[HomeController::class,'home']);
 Route::get('/list',[RestaurantController::class,'list'])->name('list');
 Route::post('/add', [RestaurantController::class,'add'])->name('add');
+Route::get('/delete/{id}', [RestaurantController::class,'delete'])->name('delete');
+Route::get('/edit/{id}', [RestaurantController::class,'edit'])->name('edit');
 Route::view('/add', 'restaurant.add')->name('add');

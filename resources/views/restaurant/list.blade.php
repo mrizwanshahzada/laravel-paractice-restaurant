@@ -21,6 +21,7 @@
                 <th scope="col">Name</th>
                 <th scope="col">Email</th>
                 <th scope="col">Address</th>
+                <th scope="col">Operations</th>
             </tr>
             </thead>
             <tbody>
@@ -30,6 +31,10 @@
                         <td>{{ $restaurant->name }}</td>
                         <td>{{ $restaurant->email }}</td>
                         <td>{{ $restaurant->Address }}</td>
+                        <td>
+                            <a href="delete/{{ $restaurant->id }}"><i class="fa fa-trash"></i></a>
+                            <a href="edit/{{ $restaurant->id }}"><i class="fa fa-edit"></i></a>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>
