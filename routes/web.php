@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RestaurantController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +19,5 @@ use App\Http\Controllers\RestaurantController;
 //     return view('welcome');
 // });
 
-Route::get('/',[RestaurantController::class,'index']);
+Route::get('/',[HomeController::class,'home']);
+Route::get('/list',[RestaurantController::class,'list'])->name('list');

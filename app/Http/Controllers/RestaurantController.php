@@ -6,8 +6,9 @@ use Illuminate\Http\Request;
 
 class RestaurantController extends Controller
 {
-    public function index()
+
+    public function list()
     {
-        return view('home');
+        return view('restaurant.list');
     }
 }
